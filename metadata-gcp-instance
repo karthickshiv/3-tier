@@ -1,0 +1,11 @@
+the following two ways which helped to get the metadata details in JSON format.
+
+Method1
+========
+curl "http://metadata.google.internal/computeMetadata/v1/instance/METADATA_KEY/?recursive=true&alt=json" -H "Metadata-Flavor: Google"
+
+METADATA_KEY can be disks/image/machine-type/network-interfaces etc...
+
+Method2
+=========
+gcloud compute instances describe servername --format=json
